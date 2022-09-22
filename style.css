@@ -1,0 +1,96 @@
+.wallpaper {
+  object-fit: cover;
+  object-position: center;
+  position: absolute;
+  z-index: 5;
+}
+
+#root {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+
+#App {
+  overflow: hidden;
+}
+
+#sky {
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  overflow: hidden;
+  margin: 0;
+  padding: 0;
+  z-index: 6;
+}
+
+#shootingstars {
+  margin: 0;
+  padding: 0;
+  width: 150vh;
+  height: 100vw;
+  position: fixed;
+  overflow: hidden;
+  transform: translatex(calc(50vw - 50%)) translatey(calc(50vh - 50%))
+    rotate(120deg);
+  z-index: 6;
+}
+
+.wish {
+  height: 2px;
+  top: 300px;
+  width: 100px;
+  margin: 0;
+  opacity: 0;
+  padding: 0;
+  background-color: white;
+  position: absolute;
+  background: linear-gradient(-45deg, white, rgba(0, 0, 255, 0));
+  filter: drop-shadow(0 0 6px white);
+  overflow: hidden;
+}
+
+.neon {
+  color: #fff;
+  text-shadow: 0 0 7px #fff, 0 0 10px #fff, 0 0 21px #fff, 0 0 42px #00c986,
+    0 0 82px #00c986, 0 0 92px #00c986, 0 0 102px #00c986, 0 0 151px #00c986;
+  z-index: 999;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 3rem;
+  white-space: nowrap;
+}
+
+.pulse {
+  -webkit-animation-name: pulse-loop-data;
+  animation-name: pulse-loop-data;
+  -webkit-transform-origin: center;
+  transform-origin: center;
+  -webkit-animation-duration: 4s;
+  animation-duration: 4s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+  -webkit-animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
+}
+
+@-webkit-keyframes pulse-loop-data {
+  0% {
+    -webkit-transform: scaleX(1);
+    transform: scaleX(1);
+  }
+  25% {
+    -webkit-transform: scale3d(1.05, 1.05, 1.05);
+    transform: scale3d(1.05, 1.05, 1.05);
+  }
+  50% {
+    -webkit-transform: scaleX(1);
+    transform: scaleX(1);
+  }
+}
